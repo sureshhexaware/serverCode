@@ -1,0 +1,81 @@
+package io.swagger.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.model.PersonUser;
+import io.swagger.v3.oas.annotations.media.Schema;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * PersonUserList
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2022-05-19T12:22:36.945512700Z[Etc/UTC]")
+
+
+public class PersonUserList   {
+  @JsonProperty("PersonUser")
+  private PersonUser personUser = null;
+
+  public PersonUserList personUser(PersonUser personUser) {
+    this.personUser = personUser;
+    return this;
+  }
+
+  /**
+   * Get personUser
+   * @return personUser
+   **/
+  @Schema(description = "")
+  
+    @Valid
+    public PersonUser getPersonUser() {
+    return personUser;
+  }
+
+  public void setPersonUser(PersonUser personUser) {
+    this.personUser = personUser;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    PersonUserList personUserList = (PersonUserList) o;
+    return Objects.equals(this.personUser, personUserList.personUser);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(personUser);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class PersonUserList {\n");
+    
+    sb.append("    personUser: ").append(toIndentedString(personUser)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
